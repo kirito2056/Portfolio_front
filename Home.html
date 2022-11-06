@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="Home.css" rel="stylesheet">
+<link href="Home.js">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+        
+</head>
+
+<script>
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("value");
+    output.innerHTML = slider.value;
+
+    slider.oninput = function() {
+    output.innerHTML = this.value;
+}
+</script>
+
+<body>
+    <header>
+        <div>
+            <ul class="navbar">
+                <li><a href="" class="Portfolio_Home">Portfolio</a></li>
+                <li><a href="" class="Portfolio_Contact_Me">Contect me</a></li>
+
+            </ul>
+        </div>
+            
+        </header>
+        <div class="background"><div>
+
+                <!--photo-->
+                <p class="photo_small">
+                    <p class="photo_center">
+                        <p class="center_dot">
+                            <p class="example_project" style="transform: rotate(22.5deg)";></p>
+                            <p class="example_project" style="transform: rotate(0deg)";></p>
+                            <p class="example_project" style="transform: rotate(45deg)";></p>
+                            <p class="example_project" style="transform: rotate(67.5deg)";></p>
+                            <p class="example_project" style="transform: rotate(90deg)";></p>
+                            <p class="example_project" style="transform: rotate(112.5deg)";></p>
+                            <p class="example_project" style="transform: rotate(135deg)";></p>
+                            <p class="example_project" style="transform: rotate(157.5deg)";></p>
+                            <p class="example_project" style="transform: rotate(180deg)";></p>
+                            <p class="example_project" style="transform: rotate(202.5deg)";></p>
+                            <p class="example_project" style="transform: rotate(225deg)";></p>
+                            <p class="example_project" style="transform: rotate(247.5deg)";></p>
+                            <p class="example_project" style="transform: rotate(270deg)";></p>
+                            <p class="example_project" style="transform: rotate(292.5deg)";></p>
+                            <p class="example_project" style="transform: rotate(315deg)";></p>
+                            <p class="example_project" style="transform: rotate(337.5deg)";></p>
+                    
+                        </p>
+                                
+                    </p>
+                </p>
+
+                <div>
+                    <input type="range" class="slider">
+                </div>
+            </div>
+    </div>
+</body>
+</html>
