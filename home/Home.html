@@ -64,3 +64,26 @@
     </div>
 </body>
 </html>
+
+<script>
+        $("#btn").on('click',function(){
+        $.ajax({
+            data :JSON.stringify({ 
+                "id": $('#userid').val(),
+                "password":$('#password').val(),
+                "companyname":$('#companyname').val(),
+                "companyrole":$('#companyrole').val()
+            }),
+            type:"post",
+            contentType: 'application/json',
+            url:"http://localhost:8080/",
+            success:function(result){
+                console.log('result ='+ result);
+                console.log("success");
+            },
+            error:function(result){
+                console.log("error");
+            }
+        });
+    });
+</script>

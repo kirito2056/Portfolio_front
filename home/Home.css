@@ -105,6 +105,15 @@
 
     transform-origin: 80px 440px;
     transform: rotate(-0deg);
+
+    transition: all 200ms ease-in;
+    transform: scale(1);
+}
+
+.example_project:hover {
+    z-index: 100;
+    transition: all 200ms ease-in;
+    transform: scale(1.2);
 }
 
 
