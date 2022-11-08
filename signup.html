@@ -60,7 +60,7 @@
                                                     placeholder="Your Password" id="logpass" autocomplete="off">
                                                 <i class="input-icon uil uil-lock-alt"></i>
                                             </div>
-                                            <a href="#" class="btn mt-4" id="signup">submit</a>
+                                            <a href="Home.html" class="btn mt-4" id="signup">submit</a>
                                         </div>
                                     </div>
                                 </div>
@@ -78,9 +78,9 @@
         $("#signup").on('click',function(){
         $.ajax({
             data : { 
-                "id": $('#id').val(),
-                "password":$('#password').val(),
-                "email":$("#email")
+                "name": $('#logname').val(),
+                "email":$('#logemail').val(),
+                "password":$("#logpass")
             },
             type:"post",
             url:"http://localhost:8080/signup",
