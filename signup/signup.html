@@ -35,7 +35,7 @@
                                                     placeholder="Your Password" id="logpass" autocomplete="off">
                                                 <i class="input-icon uil uil-lock-alt"></i>
                                             </div>
-                                            <a href="#" class="btn mt-4">submit</a>
+                                            <a href="#" class="btn mt-4" id="login">submit</a>
                                             <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your
                                                     password?</a></p>
                                         </div>
@@ -60,7 +60,7 @@
                                                     placeholder="Your Password" id="logpass" autocomplete="off">
                                                 <i class="input-icon uil uil-lock-alt"></i>
                                             </div>
-                                            <a href="#" class="btn mt-4">submit</a>
+                                            <a href="#" class="btn mt-4" id="signup">submit</a>
                                         </div>
                                     </div>
                                 </div>
@@ -72,5 +72,25 @@
         </div>
     </div>
 </body>
-
 </html>
+
+<script>
+        $("#signup").on('click',function(){
+        $.ajax({
+            data : { 
+                "id": $('#id').val(),
+                "password":$('#password').val(),
+                "email":$("#email")
+            },
+            type:"post",
+            url:"http://localhost:8080/signup",
+            success:function(result){
+                console.log('result ='+ result);
+                console.log("success");
+            },
+            error:function(result){
+                console.log("error");
+            }
+        });
+        });
+</script>
