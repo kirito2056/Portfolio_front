@@ -11,7 +11,7 @@
 
 <body>
 
-    <div class="section">
+    <div class="section">   
         <div class="container">
             <div class="row full-height justify-content-center">
                 <div class="col-12 text-center align-self-center py-5">
@@ -35,9 +35,8 @@
                                                     placeholder="Your Password" id="logpass" autocomplete="off">
                                                 <i class="input-icon uil uil-lock-alt"></i>
                                             </div>
-                                            <a href="#" class="btn mt-4" id="login">submit</a>
-                                            <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your
-                                                    password?</a></p>
+                                            <a href="Home.html" class="btn mt-4" id="signup">submit</a>
+                                            <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -60,7 +59,7 @@
                                                     placeholder="Your Password" id="logpass" autocomplete="off">
                                                 <i class="input-icon uil uil-lock-alt"></i>
                                             </div>
-                                            <a href="Home.html" class="btn mt-4" id="signup">submit</a>
+                                            <a href="#" class="btn mt-4" id="signup">submit</a>
                                         </div>
                                     </div>
                                 </div>
@@ -75,7 +74,7 @@
 </html>
 
 <script>
-        $("#signup").on('click',function(){
+    $("#signup").on('click',function(){
         $.ajax({
             data : { 
                 "name": $('#logname').val(),
@@ -92,5 +91,5 @@
                 console.log("error");
             }
         });
-        });
+    });
 </script>
