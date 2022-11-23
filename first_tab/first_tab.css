@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "Jua";
+    src: url("/Portfolio/Portfolio/first_tab/BMJUA_ttf\ \(1\).ttf");
+}
+
+.first_tab {
+
+    font-family: "Jua";
+    position: absolute;
+    background-color: rgba(119, 167, 255, 0.794);
+    
+    width: 100%;
+    height: 100px;
+
+    left: 0px;
+    top: 0px;
+}
+
+.bonobono_image {
+    
+}
