@@ -72,6 +72,25 @@
     $("#signup").on('click',function(){
         $.ajax({
             data : { 
+                "email":$('#logemail').val(),
+                "password":$("#logpass")
+            },
+            type:"post",
+            url:"http://localhost:8080/login",
+            success:function(result){
+                console.log('result ='+ result);
+                console.log("success");
+            },
+            error:function(result){
+                console.log("error");
+            }
+        });
+    });</script>
+
+<script>
+    $("#signup").on('click',function(){
+        $.ajax({
+            data : { 
                 "email":$('#signupemail').val(),
                 "name": $('#signupname').val(),
                 "password":$("#signuppass")
