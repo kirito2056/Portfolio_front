@@ -110,7 +110,7 @@
     transform: scale(1);
 }
 
-.example_project:hover {
+.project:hover {
     z-index: 5;
     transition: all 200ms ease-in;
     transform: scale(1.2);
