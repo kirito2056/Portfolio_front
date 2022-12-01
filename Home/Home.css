@@ -100,20 +100,24 @@
     left: 1840px;
     top: 80px;
 
-    background: white;
+    background-color: white;
     border: 1px solid #000000;
 
     transform-origin: 80px 440px;
-    transform: rotate(-0deg);
 
     transition: all 200ms ease-in;
+
     transform: scale(1);
+
+    padding: 0 auto
+    
 }
 
 .project:hover {
     z-index: 5;
-    transition: all 200ms ease-in;
-    transform: scale(1.2);
+    transition: all 50ms ease-in;
+    background-color:blue;
+    color:#fff;
 }
 
 .Portfolio_Home{
@@ -167,3 +171,15 @@
 .slider::-moz-range-thumb {
     border-radius: 50%;
 }
+
+.zoom-box {
+    background-color:#CF4B32;
+    width: 100px;
+    height: 100px;
+    margin: 32px auto;
+    transition: transform .2s; /* Animation */
+  }
+  
+  .zoom-box:hover {
+    transform: scale(1.5);
+  }
