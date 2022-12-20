@@ -27,64 +27,33 @@
             </ul>
         </div>
             
-        </header>
-        <div class="background"><div>
-
-            <div class="zoom-box">hi</div>
-
-                <!--photo-->
-                <p class="photo_small">
-                    <p class="photo_center">
-                        <p class="center_dot">
-                            <p class="project" style="transform: rotate(22.5deg)";></p>
-                            <p class="project" style="transform: rotate(0deg)";></p>
-                            <p class="project" style="transform: rotate(45deg)";></p>
-                            <p class="project" style="transform: rotate(67.5deg)";></p>
-                            <p class="project" style="transform: rotate(90deg)";></p>
-                            <p class="project" style="transform: rotate(112.5deg)";></p>
-                            <p class="project" style="transform: rotate(135deg)";></p>
-                            <p class="project" style="transform: rotate(157.5deg)";></p>
-                            <p class="project" style="transform: rotate(180deg)";></p>
-                            <p class="project" style="transform: rotate(202.5deg)";></p>
-                            <p class="project" style="transform: rotate(225deg)";></p>
-                            <p class="project" style="transform: rotate(247.5deg)";></p>
-                            <p class="project" style="transform: rotate(270deg)";></p>
-                            <p class="project" style="transform: rotate(292.5deg)";></p>
-                            <p class="project" style="transform: rotate(315deg)";></p>
-                            <p class="project" style="transform: rotate(337.5deg)";></p>
-                    
-                        </p>
-                                
-                    </p>
+    </header>
+    <div class="background"><div>
+        <div class="zoom-box">hi</div>
+            <!--photo-->
+            <p class="photo_small">
+                <p class="photo_center">
+                    <p class="center_dot">
+                        <p class="project" style="transform: rotate(22.5deg)";></p>
+                        <p class="project" style="transform: rotate(0deg)";></p>
+                        <p class="project" style="transform: rotate(45deg)";></p>
+                        <p class="project" style="transform: rotate(67.5deg)";></p>
+                        <p class="project" style="transform: rotate(90deg)";></p>
+                        <p class="project" style="transform: rotate(112.5deg)";></p>
+                        <p class="project" style="transform: rotate(135deg)";></p>
+                        <p class="project" style="transform: rotate(157.5deg)";></p>
+                        <p class="project" style="transform: rotate(180deg)";></p>
+                        <p class="project" style="transform: rotate(202.5deg)";></p>
+                        <p class="project" style="transform: rotate(225deg)";></p>
+                        <p class="project" style="transform: rotate(247.5deg)";></p>
+                        <p class="project" style="transform: rotate(270deg)";></p>
+                        <p class="project" style="transform: rotate(292.5deg)";></p>
+                        <p class="project" style="transform: rotate(315deg)";></p>
+                        <p class="project" style="transform: rotate(337.5deg)";></p>
+                    </p>            
                 </p>
-
-                <div>
-                    <input type="range" class="slider">
-                </div>
-            </div>
+            </p>
+        </div>
     </div>
 </body>
 </html>
-
-<script>
-        $("#btn").on('click',function(){
-        $.ajax({
-            data :JSON.stringify({ 
-                "id": $('#userid').val(),
-                "password":$('#password').val(),
-                "companyname":$('#companyname').val(),
-                "companyrole":$('#companyrole').val()
-            }),
-            type:"post",
-            contentType: 'application/json',
-            url:"http://localhost:8080/",
-            success:function(result){
-                console.log('result ='+ result);
-                console.log("success");
-            },
-            error:function(result){
-                console.log("error");
-            }
-        });
-    });
-</script>
