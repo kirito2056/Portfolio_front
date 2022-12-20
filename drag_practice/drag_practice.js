@@ -1,7 +1,5 @@
-///////////////////////////////
-// --------  drag  --------- //
-///////////////////////////////
 
+// --------  drag  --------- //
 (function() {
     var init,
         start, stop, move,
@@ -50,7 +48,7 @@
           _w = con.getBoundingClientRect().width,
           _h = con.getBoundingClientRect().height,
           x, y;
-      //check to see if mouse is inside container
+      //마우스가 원 안에 있는가?
       if (Mx - _x > _l && Mx + w - _l < _w + _x) {
         // x = mouseX - offsetX - containerX
         x = Mx - _x - _l ;
@@ -70,10 +68,8 @@
   
   }).call(this);
   
-  ///////////////////////////////
-  // -------  rotate  -------- //
-  ///////////////////////////////
-  
+
+  // -------  rotate  -------- //  
   (function() {
     var init, rotate, start, stop,
       active = false,
