@@ -15,8 +15,8 @@ body {
   
   #draggable {
     position: absolute;
-    left: 50px;
-    top: 50px;
+    left: 100px;
+    top: 100px;
     width: 200px;
     height: 200px;
     border-radius: 100px;
