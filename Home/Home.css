@@ -102,11 +102,8 @@
 
     background-color: white;
     border: 1px solid #000000;
-
     transform-origin: 80px 440px;
-
     transition: all 200ms ease-in;
-
     transform: scale(1);
 
     padding: 0 auto
@@ -118,6 +115,7 @@
     transition: all 50ms ease-in;
     background-color:blue;
     color:#fff;
+    transform: scale3d(1.5);
 }
 
 .Portfolio_Home{
@@ -131,7 +129,7 @@
     text-decoration: none;
 
     font-size: 40px;
-    font-family: 'Pretendard-Thin';
+    font-family: 'Pretendard';
     font-style: normal;
 
     left: 42px;
@@ -151,7 +149,7 @@
     top: 0px;
 
     font-size: 35px;
-    font-family: 'Pretendard-Thin';
+    font-family: 'Pretendard';
     font-style: normal;
 
     color: black;
@@ -173,7 +171,6 @@
 }
 
 .zoom-box {
-    background-color:#CF4B32;
     width: 100px;
     height: 100px;
     margin: 32px auto;
