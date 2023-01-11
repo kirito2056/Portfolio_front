@@ -113,9 +113,8 @@
 .project:hover {
     z-index: 5;
     transition: all 50ms ease-in;
-    background-color:blue;
+    background-color: rgb(0, 0, 0);
     color:#fff;
-    transform: scale3d(1.5);
 }
 
 .Portfolio_Home{
@@ -155,14 +154,30 @@
     color: black;
 }
 
+.login {
+    position: absolute;
+    float: left;
+    display: block;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+
+    left: 1700px;
+    top: 0px;
+    
+    font-size: 35px;
+    font-family: "Pretendard";
+    font-style: normal;
+    
+    color: #000000;
+}
+
 .slider {
     -webkit-appearance: none;
     appearance: none;
     width: 500px;
     height: 5px;
-
     border-radius: 50%;
-
     outline: none;
 }
 
@@ -175,8 +190,10 @@
     height: 100px;
     margin: 32px auto;
     transition: transform .2s; /* Animation */
+    background-color: aqua;
   }
   
   .zoom-box:hover {
     transform: scale(1.5);
   }
+
