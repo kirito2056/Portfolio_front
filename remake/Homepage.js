@@ -1,32 +1,35 @@
-let docTitle = document.title;
-window.addEventListener("blur", () => {document.title = "Comeback :(";})
-window.addEventListener("focus", () => {document.title = docTitle;})
+document.addEventListener("DOMContentLoaded", (event) => {
+  const circle = document.querySelector(".circle");
+  const squares = document.querySelectorAll(".square");
 
-var wheel = document.getElementById("wheel");
-var boxes = document.querySelectorAll(".box");
+  let isDragging = false;
+  let initialMouseAngle, initialCircleRotation;
 
-var center = 250;
-var radius = 200;
-var total = boxes.length;
-var slice = (2 * Math.PI) / total;
+  circle.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    const circleRect = circle.getBoundingClientRect();
+    const circleCenterX = circleRect.left + circleRect.width / 2;
+    const circleCenterY = circleRect.top + circleRect.height / 2;
 
-boxes.forEach(function (box, i) {
-    var angle = i * slice;
-    var x = center + radius * Math.sin(angle);
-    var y = center - radius * Math.cos(angle);
+    initialMouseAngle = Math.atan2(e.clientY - circleCenterY, e.clientX - circleCenterX) * (180 / Math.PI);
+    initialCircleRotation = circle.style.transform ? parseInt(circle.style.transform.replace("rotate(", "").replace("deg)", "")) : 0;
 
-    TweenLite.set(box, {
-        rotation: angle + "_rad",
-        xPercent: -50,
-        yPercent: -50,
-        x: x,
-        y: y,
-    });
-});
+    document.addEventListener("mousemove", onDrag);
+  });
 
-Draggable.create(wheel, {
-    type: "rotation",
-    throwProps: true,
-    minimumMovement: 10,
-    dragClickables: true,
+  document.addEventListener("mouseup", (e) => {
+    isDragging = false;
+    document.removeEventListener("mousemove", onDrag);
+  });
+
+  function onDrag(e) {
+    if (!isDragging) return;
+    const circleRect = circle.getBoundingClientRect();
+    const circleCenterX = circleRect.left + circleRect.width / 2;
+    const circleCenterY = circleRect.top + circleRect.height / 2;
+    const currentMouseAngle = Math.atan2(e.clientY - circleCenterY, e.clientX - circleCenterX) * (180 / Math.PI);
+    const newCircleRotation = initialCircleRotation + (currentMouseAngle - initialMouseAngle);
+
+    circle.style.transform = `rotate(${newCircleRotation}deg)`;
+  }
 });
