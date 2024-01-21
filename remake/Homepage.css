@@ -25,7 +25,7 @@ html {
 }
 
 .circle-container {
-  --size: 25vh; /* 원의 크기 */
+  --size: 30vh; /* 원의 크기 */
   width: var(--size);
   height: var(--size);
   position: absolute;
@@ -42,11 +42,11 @@ html {
 .square {
   border: 1px solid #000;
 
-  width: 20em; /* 사각형의 크기 */
-  height: 12em;
+  width: 12em; /* 사각형의 크기 */
+  height: 7em;
   background-color: gray;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(calc(var(--i) * 45deg)) translate(30em);
+  transform: translate(-50%, -50%) rotate(calc(var(--i) * 45deg)) translate(15em);
 }
