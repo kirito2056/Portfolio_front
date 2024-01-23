@@ -39,12 +39,27 @@ html {
   background-color: white;
 }
 
+.circle-display {
+  width: 85%;
+  height: 85%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: black;
+  border-radius: 50%;
+  border: 1px solid #000;
+
+
+}
+
 .square {
   border: 1px solid #000;
 
   width: 12em; /* 사각형의 크기 */
   height: 7em;
-  background-color: gray;
   position: absolute;
   top: 50%;
   left: 50%;
