@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>지연된 클릭</title>
+    <style>
+        .clickable-div {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="clickable-div" id="myDiv">
+        .
+    </div>
+
+    <script>
+        let timeoutId;
+        let isMouseDown = false;
+
+        function redirectToLink() {
+            if (isMouseDown) {
+                window.location.href = 'https://www.example.com';
+            }
+        }
+
+        const clickableDiv = document.getElementById('myDiv');
+
+        clickableDiv.addEventListener('mouseenter', function() {
+            timeoutId = setTimeout(function() {
+                redirectToLink();
+            }, 2000);
+        });
+
+        clickableDiv.addEventListener('mouseleave', function() {
+            clearTimeout(timeoutId);
+        });
+
+        clickableDiv.addEventListener('mousedown', function() {
+            isMouseDown = true;
+        });
+
+        clickableDiv.addEventListener('mouseup', function() {
+            isMouseDown = false;
+        });
+    </script>
+</body>
+</html>
