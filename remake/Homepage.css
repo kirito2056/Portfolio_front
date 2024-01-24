@@ -37,6 +37,7 @@ html {
   border-radius: 50%;
   position: relative;
   background-color: white;
+  border: 5px solid #fff
 }
 
 .circle-display {
@@ -61,7 +62,8 @@ html {
   width: 12em; /* 사각형의 크기 */
   height: 7em;
   position: absolute;
+  background-color: gray;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(calc(var(--i) * 45deg)) translate(15em);
+  transform: translate(-50%, -50%) rotate(calc(var(--i) * 45deg)) translate(14.8em);
 }
