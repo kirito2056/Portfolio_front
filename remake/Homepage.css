@@ -24,11 +24,23 @@ html {
   height: calc(100% - 60px); /* header 높이를 뺀 나머지 높이 */
 }
 
+.project_container {
+  position: absolute;
+  top: 60px;
+
+  width: 60vw;
+  height: 50vh;
+
+  color: #000;
+}
+
 .circle-container {
   --size: 30vh; /* 원의 크기 */
   width: var(--size);
   height: var(--size);
   position: absolute;
+
+  left: 80%;
 }
 
 .circle {

@@ -36,6 +36,6 @@ function petpong() {
     alert('1학년 2학기 나르샤 프로젝트')
 }
 
-function memo() {
-    alert('방명록')
+function notion() {
+    location.href = 'https://daegu-software-meister-highschool-2022.notion.site/daegu-software-meister-highschool-2022/501d9b7882de494e92f004b8003daa42'
 }
