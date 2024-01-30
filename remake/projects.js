@@ -1,22 +1,50 @@
 let server = 'localhost:8080/';
 
-function physicalGuide() {
-    alert('피지컬 가이드')
-    $(function() {
-        $("#requestBtn").on("click", function() {
-            $.post(server + 'physicalguide'),
-                function(data, status) {
-                    $("#text").html(data + "<br>" + status);
-                }
-        })
+document.addEventListener("DOMContentLoaded", (event) => {
+    const circle = document.querySelector(".circle");
+
+    const mojoAi = document.querySelector(".mojoAi");
+    const physicalGuide = document.querySelector(".physicalGuide");
+    const midasHackathon = document.querySelector(".midasHackathon");
+    const numberClock = document.querySelector("numberClock");
+    const somein = document.querySelector(".somein");
+    const stepAssister = document.querySelector(".stepAssister");
+    const petpong = document.querySelector("petpong");
+
+    mojoAi.addEventListener("mousedown", (e) => {
+        circle.style.transform = 'rotate(45deg)'
     })
+})
+
+function physicalGuide() {
+    /*
+    alert('피지컬 가이드')
+    $.get('send-ajax-data.php').done(function(data) {
+        console.log(data); //  '반환된 텍스트'
+    }).fail(function(data) {
+        console.log('에러: ' + data);
+    });
+    */
 }
 
 function mojoAi() {
+/*
+    $.ajax({
+		type: 'get',
+		url : 'jQueryAjax01_data.jsp',
+		dataType:'text', 
+		success: function(data){
+			alert(data);   
+		},
+		error:function(){ 
+			alert('실패');
+		}
+	})
+*/
     alert('모조로 만들려고 했지만 파이썬으로 만들게된 인공지능')
 }
 
-function midasHachathon() {
+function midasHackathon() {
     alert('마이다스 해커톤')
 }
 
