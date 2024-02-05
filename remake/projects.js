@@ -12,6 +12,30 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const petpong = document.querySelector("petpong");
 
     mojoAi.addEventListener("mousedown", (e) => {
+        circle.style.transform = 'rotate(202.5deg)'
+    })
+
+    physicalGuide.addEventListener('mousedown',(e) => {
+        circle.style.transform = 'rotate(0deg)'
+    })
+
+    midasHackathon.addEventListener('mousedown', (e) => {
+        circle.style.transform = 'rotate(-90deg)'
+    })
+
+    numberClock.addEventListener('mousedownn', (e) => {
+        circle.style.transform = 'rotate(-22.5deg)'
+    })
+
+    somein.addEventListener('mousedown', (e) => {
+        circle.style.transform = 'rotate(335.5deg)'
+    })
+
+    stepAssister.addEventListener('mousedown', (e) => {
+        circle.style.transform = 'rotate(22.5deg)'
+    })
+
+    petpong.addEventListener('mousedown', (e) => {
         circle.style.transform = 'rotate(45deg)'
     })
 })
